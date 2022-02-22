@@ -25,7 +25,7 @@
 .grayScale {
   filter: grayscale(100%);
 }
-@media (max-width: 500px) {
+@media (max-width: 729px) {
   .main-container {
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 730px) {
   .main-container {
     width: 50vw;
     display: flex;

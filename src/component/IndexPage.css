@@ -1,11 +1,11 @@
-@media (max-width: 500px) {
+@media (max-width: 729px) {
   .first-component {
     display: flex;
     flex-direction: column;
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 730px) {
   .first-component {
     display: flex;
     flex-direction: row;

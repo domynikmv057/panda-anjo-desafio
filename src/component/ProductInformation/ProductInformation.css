@@ -195,7 +195,7 @@
 .pix-price div {
   display: flex;
 }
-@media (max-width: 500px) {
+@media (max-width: 729px) {
   .main-container {
     background-color: #f5f5f5;
     margin-top: 15px;
@@ -206,9 +206,12 @@
   .pix-price {
     display: none;
   }
+  .lin-span-more {
+    display: none;
+  }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 730px) {
   .main-container {
     width: 50vw;
     background-color: #f5f5f5;

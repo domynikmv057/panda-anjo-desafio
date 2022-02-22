@@ -1,3 +1,7 @@
+// Tentei realmente fazer com uma API de frete, mas
+// estava complicado achar, então fiz com essa de cep,
+// só para não ficar sem.
+
 import { useState } from "react";
 import axios from "axios";
 import "./Frete.css";
@@ -33,16 +37,18 @@ export const Frete = () => {
   };
 
   return (
-    <section>
-      <div>
+    <section className="main-container-frete">
+      <div className="frete-title">
         <p>CALCULE O FRETE</p>
         <a href="#">Não sei meu CEP</a>
       </div>
-      <div>
+
+      <div className="input-and-button">
         <input
           type="text"
           name="Frete"
           id="frete"
+          placeholder="Insira o CEP aqui"
           onChange={(e) => {
             handleInput(e);
           }}
@@ -55,21 +61,23 @@ export const Frete = () => {
           CALCULAR
         </button>
       </div>
-      <div>
+
+      <div className="cep-calc">
         {apiData ? (
-          <div>
+          <div className="cep-response-container">
             <div className="cep-response">
-              <p>{apiData?.data.uf}</p>
-              <p>{apiData?.data.localidade}</p>
-              <p>{apiData?.data.bairro}</p>
-              <p>{apiData?.data.logradouro}</p>
+              <p>
+                <span>Endereço: </span>
+                {apiData?.data.logradouro}, {apiData?.data.bairro},{" "}
+                {apiData?.data.localidade} - {apiData?.data.uf}
+              </p>
             </div>
             <div className="fake-frete-calc">
-              <p>{apiData ? "Valor do frete: R$ 25,00" : ""}</p>
+              <p>{apiData ? "Frete: R$ 25,00" : ""}</p>
             </div>
           </div>
         ) : (
-          <div>
+          <div className="cep-response">
             <p>{errorMensage}</p>
           </div>
         )}
