@@ -9,7 +9,7 @@ export const ProductInformation = () => {
   const [oldPrice, setOldPrice] = useState(30.0);
   const [pixPrice, setPixPrice] = useState(22.23);
   const [cardPrice, setCardPrice] = useState(7.8);
-  const [basePrice, setBasePrice] = useState({
+  const [basePrice] = useState({
     price: 23.4,
     oldPrice: 30.0,
     pixPrice: 22.23,
@@ -136,7 +136,7 @@ export const ProductInformation = () => {
         </div>
       </div>
       <div className="link-large-quantities ">
-        <a href="#">
+        <a href="/">
           {" "}
           Quer comprar em grandes quantidades?{" "}
           <span className="lin-span-more">Temos um desconto especial!</span>
