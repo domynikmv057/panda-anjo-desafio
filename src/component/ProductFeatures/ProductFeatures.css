@@ -1,0 +1,89 @@
+.big-svg {
+  width: 50px;
+  margin-left: 5px;
+}
+
+.normal-svg {
+  width: 60px;
+}
+.svg-container span {
+  margin-left: 10px;
+}
+
+@media (max-width: 729px) {
+  .main-container-features div {
+    min-width: 50%;
+  }
+  .main-container-features {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 70px;
+
+    /* UI Properties */
+    background: transparent linear-gradient(269deg, #80d6b5 0%, #89c993 100%) 0%
+      0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .food-background {
+    height: 420px;
+    background-image: url("../../assets/product/FoodBackground\ 850x842.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .svg-container {
+    margin: 10px 0;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal bold 16px/19px Raleway;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 730px) {
+  .main-container-features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 70px;
+
+    /* UI Properties */
+    background: transparent linear-gradient(269deg, #80d6b5 0%, #89c993 100%) 0%
+      0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .svg-container {
+    padding-right: 100px;
+    border-right: 2px solid #ffffff;
+  }
+
+  .svg-container:last-child {
+    border: none;
+  }
+
+  .food-background {
+    height: 410px;
+    background-color: #f5f5f5;
+    background-image: url("../../assets/product/FoodBackground\ 1366x421.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main-container-features {
+    height: 100%;
+  }
+
+  .svg-container {
+    margin: 10px 0;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal bold 16px/19px Raleway;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+}

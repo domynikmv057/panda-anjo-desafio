@@ -1,7 +1,7 @@
 import "./IndexPage.css";
 import { CarouselImage } from "./CarouselImage/CarouselImage.jsx";
 import { ProductInformation } from "./ProductInformation/ProductInformation.jsx";
-
+import { ProductFeatures } from "./ProductFeatures/ProductFeatures.jsx";
 export const IndexPage = () => {
   return (
     <main>
@@ -9,6 +9,7 @@ export const IndexPage = () => {
         <CarouselImage />
         <ProductInformation />
       </div>
+      <ProductFeatures />
     </main>
   );
 };

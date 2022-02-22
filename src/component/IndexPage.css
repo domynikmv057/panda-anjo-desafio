@@ -9,5 +9,7 @@
   .first-component {
     display: flex;
     flex-direction: row;
+    max-width: 1500px;
+    margin: 0 auto;
   }
 }
