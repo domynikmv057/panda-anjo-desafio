@@ -5,19 +5,25 @@ import { StarsBuilding } from "../../services/StarsBuilding.js";
 import { Api } from "../../services/Api/Api.js";
 export const RatingCarousel = () => {
   const [ratingPost, setRatingPost] = useState([]);
-  const [totalStars, setTotalStars] = useState();
-
+  const [totalStars, setTotalStars] = useState(0);
   const carousel = useRef(null);
+
   useEffect(() => {
     Api.get("/rating").then((response) => {
       setRatingPost(response.data);
     });
   }, []);
 
+  useEffect(() => {
+    const stars = ratingPost.reduce((acc, value) => {
+      return (acc += value.stars);
+    }, 0);
+    setTotalStars(Math.round(stars / ratingPost.length));
+  }, [ratingPost]);
+
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
-    console.log(totalStars);
   };
   const handleRightClick = (e) => {
     e.preventDefault();
@@ -31,7 +37,7 @@ export const RatingCarousel = () => {
         <div className="rating-total">
           <p>({ratingPost.length} avaliações)</p>
           <div className="line-seper"></div>
-          <div className="stars-list">{StarsBuilding(3)}</div>
+          <div className="stars-list">{StarsBuilding(totalStars)}</div>
         </div>
       </div>
       <div className="carrosel-slide">

@@ -19,7 +19,6 @@ export const Frete = () => {
     setApiData();
     setErrorMensage();
     const url = "https://viacep.com.br/ws/" + cep + "/json/";
-    console.log(url);
 
     axios
       .get(url)

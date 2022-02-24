@@ -16,6 +16,7 @@
   }
   .main-container-features {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 40px 70px;
 
