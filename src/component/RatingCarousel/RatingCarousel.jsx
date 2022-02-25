@@ -6,6 +6,7 @@ import { Api } from "../../services/Api/Api.js";
 export const RatingCarousel = () => {
   const [ratingPost, setRatingPost] = useState([]);
   const [totalStars, setTotalStars] = useState(0);
+  const [scroll, setScroll] = useState(0);
   const carousel = useRef(null);
 
   useEffect(() => {
@@ -24,10 +25,12 @@ export const RatingCarousel = () => {
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    setScroll(carousel.current.scrollLeft);
   };
   const handleRightClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.offsetWidth;
+    setScroll(carousel.current.scrollLeft);
   };
 
   return (
@@ -60,13 +63,26 @@ export const RatingCarousel = () => {
         <button className="invert-position" onClick={handleRightClick}>
           <img src={ArrowIcon} alt="scroll right" />
         </button>
-
-        <section className="carousel-buttons">
-          <button className="slide-style-1"></button>
-          <button className="slide-style-2"></button>
-          <button className="slide-style-2"></button>
-        </section>
       </div>
+      <section className="carousel-buttons">
+        <button
+          className={
+            scroll <= 1000 ? "slide-rating-style-1" : "slide-rating-style-2"
+          }
+        ></button>
+        <button
+          className={
+            scroll >= 1000 && scroll <= 2000
+              ? "slide-rating-style-1"
+              : "slide-rating-style-2"
+          }
+        ></button>
+        <button
+          className={
+            scroll >= 2000 ? "slide-rating-style-1" : "slide-rating-style-2"
+          }
+        ></button>
+      </section>
     </section>
   );
 };
