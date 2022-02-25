@@ -10,7 +10,7 @@
 
 ### \* Justificativa
 
-<p>Eu optei por fazer o projeto em React para mostrar meus conhecimentos, o que mais me motivou, foi o video que recebemos para orientar no projeto, onde eles falam "Mostrem tudo o que vocês sabem" e eu resolvi me dedicar fazendo tudo o que eu sei, montei um pequeno "back-end" com o Jason-server, além de conexões com API's externas, tentei mostrar tudo que eu sabia, acredito que eu tenha alcançado um bom resultado. </p>
+<p>Eu optei por fazer o projeto em React para mostrar meus conhecimentos, o que mais me motivou, foi o video que recebemos para orientar no projeto, onde eles falam "Mostrem tudo o que vocês têm a oferecer" e eu resolvi me dedicar fazendo tudo o que eu sei, montei um pequeno "back-end" com o Jason-server, além de conexões com API's externas, tentei mostrar tudo que eu sabia, acredito que eu tenha alcançado um bom resultado. </p>
 
 ## Executando o Projeto
 
